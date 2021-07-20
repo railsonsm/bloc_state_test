@@ -19,7 +19,9 @@ class RecordController extends Cubit<RecordState> {
 
   Future<List<RecordModel>> getRecords() async {
     List<RecordModel> records = [];
-    records.add(RecordModel('test', DateTime.now()));
+    for (var i = 0; i < 5; i++) {
+      records.add(RecordModel('test', DateTime.now()));
+    }
 
     Timer(Duration(seconds: 1), () {});
 
